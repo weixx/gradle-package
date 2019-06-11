@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 矩形内部填充-线性对角线渐变 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="true">
+
+    <size
+        android:width="50dp"
+        android:height="50dp" />
+
+
+    <!-- 调整angle实现水平渐变，垂直渐变或者对角渐变 -->
+    <gradient
+        android:angle="135"
+        android:centerX="0.5"
+        android:centerY="0.5"
+        android:centerColor="#B00D79"
+        android:endColor="#DE4B3C"
+        android:startColor="#713690"
+        android:type="linear" />
+</shape>
