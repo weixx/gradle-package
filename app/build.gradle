@@ -44,9 +44,9 @@ android {
             // 动态修改 常量 字段
             buildConfigField "String", "ENVIRONMENT", '"dev"'
             // 修改 AndroidManifest.xml 里渠道变量
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE:"dev",
-                                    app_icon:"@mipmap/ic_launcher",
-                                    app_name:"dev_myapp"]
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "dev",
+                                    app_icon           : "@mipmap/ic_launcher",
+                                    app_name           : "dev_myapp"]
             dimension "version"
         }
         stage {
@@ -56,9 +56,9 @@ android {
 
             buildConfigField "String", "ENVIRONMENT", '"stage"'
 
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE:"stage",
-                                    app_icon:"@mipmap/ic_launcher",
-                                    app_name:"stage_myapp"]
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "stage",
+                                    app_icon           : "@mipmap/ic_launcher",
+                                    app_name           : "stage_myapp"]
             dimension "version"
         }
         prod {
@@ -68,9 +68,9 @@ android {
 
             buildConfigField "String", "ENVIRONMENT", '"prod"'
 
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE:"prod",
-                                    app_icon:"@mipmap/ic_launcher",
-                                    app_name:"prod_myapp"]
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "prod",
+                                    app_icon           : "@mipmap/ic_launcher",
+                                    app_name           : "prod_myapp"]
             dimension "version"
         }
     }
@@ -98,7 +98,7 @@ android {
             android.applicationVariants.all {
                 variant ->
                     variant.outputs.all {
-                        outputFileName = rootProject.getName()+"_" + productFlavors[0].name + "_" + buildType.name + "_v" + defaultConfig.versionName + "-${releaseTime()}.apk"
+                        outputFileName = rootProject.getName() + "_" + productFlavors[0].name + "_" + buildType.name + "_v" + defaultConfig.versionName + "-${releaseTime()}.apk"
                     }
             }
 
